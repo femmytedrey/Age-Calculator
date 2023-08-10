@@ -19,7 +19,7 @@ function calculateAge() {
     errorYearElement.textContent = '';
 
     // Input validation
-    if (isNaN(day) || isNaN(month) || isNaN(year) || day < 1 || day > 31 || month < 1 || month > 12 || year < 1900 || year > 2100) {
+    if (isNaN(day) || isNaN(month) || isNaN(year) || day < 1 || month < 1 || month > 12 || year < 1900 || year > 2100) {
         if (isNaN(day) || day < 1 || day > 31) {
             errorDayElement.textContent = "Must be a valid day";
         }
@@ -35,14 +35,19 @@ function calculateAge() {
         return; // Stop further execution
     }
 
+    const isLeapYear = (year % 4 === 0 && year % 100 !== 0) || (year % 400 === 0);
+
+    if ((month === 2 && day > (isLeapYear ? 29 : 28)) || ((month === 4 || month === 6 || month === 9 || month === 11) && day > 30) || day > 31) {
+        errorDayElement.textContent = "Invalid day for selected month";
+        return; // Stop further execution
+    }
+
     if (birthDate > currentDate) {
         errorYearElement.textContent = 'Birthdate must be in the past.';
         return; // Stop further execution
     }
 
     // Calculate age (remaining code unchanged)
-    // ...
-
     const ageInMilliseconds = currentDate - birthDate;
     const ageDate = new Date(ageInMilliseconds);
     const years = ageDate.getUTCFullYear() - 1970;
@@ -58,14 +63,17 @@ function calculateAge() {
     actualDayElement.textContent = days;
 }
 
-
 const submitButton = document.querySelector('.submit');
 submitButton.addEventListener('click', function (event) {
-    event.preventDefault(); 
+    event.preventDefault(); // Prevent the default form submission behavior
     calculateAge(); // Call your age calculation function
 });
 
+// Add event listeners to input fields to clear error messages
+const dayInput = document.getElementById("inputDay");
+const monthInput = document.getElementById("inputMonth");
+const yearInput = document.getElementById("inputYear");
 
-
-
-
+dayInput.addEventListener('input', clearErrorMessage);
+monthInput.addEventListener('input', clearErrorMessage);
+yearInput.addEventListener('input', clearErrorMessage);
