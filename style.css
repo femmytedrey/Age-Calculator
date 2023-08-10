@@ -1,0 +1,236 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap") rel="stylesheet";
+
+
+
+* {
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+  font-family: 'Poppins', sans-serif;
+  
+}
+.container{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #874dfc27;
+}
+.card{
+    width: 700px;
+    height: 500px;
+    background: white;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 35%;
+    padding: 50px;
+    padding-right: 95px;
+    /* box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); */
+}
+form{
+    display: flex;
+    position: relative;
+    height: 100%;
+    display: flex;
+    /* background-color: green; */
+    
+}
+
+label{
+    font-size: 16px;
+    font-weight: 600;
+}
+
+input{
+    height: 60px;
+    width: 130px;
+    border-radius: 8px;
+    border: 1px solid rgba(136, 136, 136, 0.555);
+    padding-left: 20px;
+    font-size: 24px;
+    font-weight: 700;
+    display: flex;
+    
+}
+.errorDay{
+    font-size: 12px;
+    font-style: italic;
+    font-weight: 500;
+    color: rgb(196, 0, 0);
+}
+
+.errorMonth{
+    font-size: 12px;
+    font-style: italic;
+    font-weight: 500;
+    color: rgb(196, 0, 0);
+}
+
+.errorYear{
+    font-size: 12px;
+    font-style: italic;
+    font-weight: 500;
+    color: rgb(196, 0, 0);
+}
+
+.top{
+    height: 27%;
+    width: 100%;
+    /* background: powderblue; */
+    position: relative;
+    
+
+}
+.box{
+    height: 100%;
+    width: 30%;
+    /* background: yellow; */
+}
+
+.submit{
+    height: 80px;
+    width: 80px;
+    /* background: purple; */
+    position: absolute;
+    top: 60px;
+    right: -40px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.arrow{
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+    background: #864DFC;
+    background-image: url(images/icon-arrow.svg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 50%;
+    cursor: pointer;
+    border: none;
+}
+.arrow:hover{
+    background: black;
+    background-image: url(images/icon-arrow.svg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 50%;
+
+}
+
+.bottom{
+    height: 72%;
+    width: 100%;
+    /* background: pink; */
+    border-bottom-right-radius: 35%;
+    display: flex;
+    flex-direction: column;
+    padding-top: 37px;
+    border-top: 1px solid rgba(0, 0, 0, 0.458);
+
+}
+
+.age{
+    font-size: 80px;
+    font-weight: 900;
+    line-height: 80px;
+    font-style: italic;
+}
+
+span{
+    color: #864DFC;
+}
+
+@media only screen and (max-width: 660px){
+    .container{
+        width: 100%;
+        height: cover;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+    }
+
+    .card{
+        width: 90%;
+        height: 550px;
+        padding-left: 25px;
+        padding-right: 25px;
+    }
+
+    .top{
+        height: 40%;
+        width: 100%;
+        padding-right: 0;
+        justify-content: space-between;
+    }
+
+    .bottom{
+        height: 60%;
+        width: 100%;
+    }
+    form{
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .box{
+        width: 30%;
+        height: 60%
+    }
+    input{
+        width: 100%;
+        padding-left: 10px;
+    }
+
+    .submit{
+        height: 75px;
+        width: 75px;
+        /* background: purple; */
+        position: absolute;
+        top: 143px;
+        right: 110px;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+    }
+
+    .age{
+        font-size: 50px;
+        font-weight: 900;
+        line-height: 68px;
+        font-style: italic;
+    }
+
+    .bottom{
+        padding-top: 50px;
+    }
+
+    .errorDay{
+        font-size: 8px;
+        font-style: italic;
+        font-weight: 500;
+        color: rgb(196, 0, 0);
+    }
+    
+    .errorMonth{
+        font-size: 8px;
+        font-style: italic;
+        font-weight: 500;
+        color: rgb(196, 0, 0);
+    }
+    
+    .errorYear{
+        font-size: 8px;
+        font-style: italic;
+        font-weight: 500;
+        color: rgb(196, 0, 0);
+    }
+}

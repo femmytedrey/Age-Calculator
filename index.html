@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculate My Age</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <div class="top">
+                
+                    <form action="">
+                        <div class = "box">
+                            <label for="day">DAY</label><br>
+                            <input type="text" id="day" name="day" placeholder="DD">
+                            <div class="errorDay"></div>
+                        </div>
+
+                        <div class = "box">
+                            <label for="month">MONTH</label><br>
+                            <input type="text" id="month" name="month" placeholder="MM">
+                            <div class="errorMonth"></div>
+                        </div>
+
+                        <div class = "box">
+                            <label for="year">YEAR</label><br>
+                            <input type="text" id="year" name="year" placeholder="YYYY">
+                            <div class="errorYear"></div>
+                        </div>
+                        <div class="submit">
+                            <input type="submit" class ="arrow" value="">
+                        </div>  
+                    </form>
+                
+
+            </div>
+
+
+            <div class="bottom">
+                <p class="age"><span class="actual_year">- -    </span> years</p>
+                <p class="age"><span class="actual_month">- -</span> months</p>
+                <p class="age"><span class="actual_day">- -</span> days</p>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="script.js"></script>
+</body>
+</html>
