@@ -15,7 +15,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background: #874dfc27;
+    background: rgba(151, 151, 151, 0.538);
 }
 .card{
     width: 700px;
